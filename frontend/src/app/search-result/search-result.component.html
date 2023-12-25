@@ -1,0 +1,131 @@
+<div fxLayoutAlign="center">
+  <div class="table-container custom-slate">
+    <!-- <div class="heading mat-elevation-z6"> -->
+    <div *ngIf="searchValue">
+      <span>{{ "TITLE_SEARCH_RESULTS" | translate }} - </span>
+      <span id="searchValue" [innerHTML]="searchValue"></span>
+    </div>
+    <!-- <div id="all_drink" *ngIf="!searchValue">All Drinks</div> -->
+    <h1>Available Food <span id="h-span">Near you</span></h1>
+    <div id="search-result-heading"></div>
+    <!-- </div> -->
+
+    <div *ngIf="!emptyState; else emptyResult">
+      <div id="product-container">
+        <div *ngFor="let item of gridDataSource | async">
+          <mat-card
+            class="example-card"
+            (mouseenter)="isHovered = true"
+            (mouseleave)="isHovered = false"
+          >
+            <!-- <div
+              class="ribbon ribbon-top-left"
+              *ngIf="item.quantity <= 5 && item.quantity > 0"
+            >
+              <span translate [translateParams]="{ quantity: item.quantity }"
+                >LABEL_ONLY_QUANTITY_LEFT</span
+              >
+            </div> -->
+            <!-- <div
+              class="ribbon ribbon-top-left ribbon-sold"
+              *ngIf="item.quantity <= 0"
+            >
+              <span id="ribbon-sold-out" translate>LABEL_SOLD_OUT</span>
+            </div> -->
+
+            <div
+              id="box-detail"
+              style="color: black"
+              (click)="showDetail(item)"
+              aria-label="Click for more information about the product"
+              class="product"
+              matTooltip="Click for more information"
+              matTooltipPosition="above"
+            >
+              <img
+                id="product-img"
+                mat-card-image
+                [src]="'assets/public/images/products/' + item.image"
+                alt="{{ item.name }}"
+                alt="Photo of a Shiba Inu"
+              />
+              <mat-card-content>
+                <p id="product-name">
+                  {{ item.name }}
+                </p>
+              </mat-card-content>
+            </div>
+            <div id="card-actions">
+              <button id="p_price" mat-button>
+                <span *ngIf="!isDeluxe() || item.price === item.deluxePrice"
+                  >${{ item.price }}</span
+                >
+                <span *ngIf="isDeluxe() && item.price !== item.deluxePrice">
+                  <s>{{ item.price }}</s> {{ item.deluxePrice }};
+                </span>
+              </button>
+              <button
+                class="btn-add-to-cart"
+                mat-button
+                (click)="addToBasket(item.id)"
+                *ngIf="isLoggedIn()"
+              >
+                +
+              </button>
+              <!-- <button
+              class="rounded-btn"
+                mat-button
+                (click)="addToBasket(item.id)"
+                *ngIf="isLoggedIn()"
+              >
+                <span><img
+                  id="add-to-cart-img"
+                  src="https://cdn-icons-png.flaticon.com/512/4379/4379542.png"
+                  alt="imgese"
+                /></span>
+              </button> -->
+            </div>
+            <div >
+              <!-- <button
+                class="btn-add-to-cart"
+                mat-button
+                (click)="addToBasket(item.id)"
+                *ngIf="isLoggedIn()"
+              >
+                Add to cart
+              </button> -->
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #emptyResult>
+      <mat-card class="mat-elevation-z6 emptyState">
+        <img
+          alt=" No results found"
+          class="img-responsive noResult"
+          src="assets/public/images/products/no-results.png"
+        />
+        <mat-card-title>
+          <span class="noResultText" translate> NO_SEARCH_RESULT </span>
+        </mat-card-title>
+        <mat-card-content>
+          <span class="noResultText" translate> EMPTY_SEARCH_RESULT </span>
+        </mat-card-content>
+      </mat-card>
+    </ng-template>
+
+    <mat-divider></mat-divider>
+
+    <mat-paginator
+      #paginator
+      [pageSize]="12"
+      [pageSizeOptions]="pageSizeOptions"
+      [length]="resultsLength"
+      class="mat-elevation-z6"
+      color="accent"
+    >
+    </mat-paginator>
+  </div>
+</div>

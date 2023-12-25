@@ -1,0 +1,23 @@
+{
+  "name": "CSTAD",
+  "description": "Probably the most modern and sophisticated insecure web application",
+  "keywords": [
+    "web security",
+    "web application security",
+    "webappsec",
+    "owasp",
+    "pentest",
+    "pentesting",
+    "security",
+    "vulnerable",
+    "vulnerability",
+    "broken",
+    "bodgeit",
+    "ctf",
+    "capture the flag",
+    "awareness"
+  ],
+  "website": "https://owasp-juice.shop",
+  "repository": "https://github.com/juice-shop/juice-shop",
+  "logo": "https://cdn-icons-png.flaticon.com/512/5978/5978671.png"
+}

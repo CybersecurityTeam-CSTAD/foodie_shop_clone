@@ -1,0 +1,230 @@
+
+
+$bg-heading: rgba(0, 0, 0, 0.2);
+
+.table-container {
+  min-width: 350px;
+  width: 80%;
+}
+
+.heading {
+  background: $bg-heading;
+  font-size: x-large;
+  justify-content: center;
+  padding: 12px 20px;
+}
+
+
+.product {
+  cursor: pointer;
+}
+
+
+
+.emptyState {
+  display: block;
+  height: auto !important;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.noResult {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.noResultText {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.ribbon-card {
+  position: relative;
+}
+#ribbon-sold-out{
+  background-color: red;
+  color: #000;
+}
+
+.ribbon {
+  height: 150px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 150px;
+ 
+}
+
+.ribbon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.ribbon span {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  display: block;
+  font: 700 18px/1 'Lato', sans-serif;
+  padding: 15px 0;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  width: 225px;
+  background-color: #007bff;
+}
+
+.ribbon-top-left {
+  left: -10px;
+  top: -10px;
+}
+
+.ribbon-top-left::before {
+  border-left-color: transparent;
+  border-top-color: transparent;
+  right: 0;
+  top: 0;
+}
+
+.ribbon-top-left span {
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
+}
+
+
+
+#card-actions{
+  display: flex;
+  justify-content: space-between;
+}
+#add-to-cart{
+  background-color: #00ffd594;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.example-card {
+  width: 260px;
+  // height: 300px;
+  padding: 5px;
+  box-shadow: #e3dada 0px 0px 5px;
+  // border-radius: 10px;
+  // box-shadow: #e3dada 0px 0px 5px;
+}
+.example-card:hover{
+  box-shadow: #e3dada 0px 0px 5px;
+  transition: 0.5s;
+  z-index: 1;
+  // scale
+  transform: scale(1.1);
+}
+.btn-add-to-cart{
+  color: white;
+  background-color: #00b14f;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: none;
+
+
+}
+.example-card:hover .btn-add-to-cart{
+  display: block;
+  transition: 0.5s;
+  z-index: 1;
+ 
+  
+}
+
+#product-name{
+  font-size: 16px;
+  font-weight: 600;
+  color: #565656;
+  text-align: start;
+  margin-top: 10px;
+
+
+}
+#product-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+#box-detail{
+  width: 180px;
+
+}
+
+#product-img{
+  width: 260px;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+
+}
+
+#add-to-cart-img{
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#p_price{
+  color: rgb(65, 64, 64);
+  font-weight: 600;
+  font-size: 14px;
+  background-color: transparent !important;
+}
+#all_drink{
+  font-weight: 400;
+  font-size: 20px;
+  
+}
+
+/* Style for the rounded button */
+.rounded-btn {
+  border-radius: 60px; /* Adjust the radius as needed */
+  padding: 10px 20px; /* Set padding for inner content */
+  height: 60px;
+  border: none; /* Remove default button border */
+  background-color: #00b14f; /* Change background color */
+  color: #ffffff; /* Set text color */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+
+}
+
+/* Hover effect */
+.rounded-btn:hover {
+  background-color: whitesmoke; /* Change background color on hover */
+  color: #00b14f;
+  
+}
+#h-span{
+  color: #00b14f;
+  
+}
+
+h1{
+  font-size: 3rem;
+  line-height: 1.21428571;
+  font-weight: 700;
+  color: #565656;
+  margin-bottom: 33px;
+}
+
+mat-divider{
+  background-color: #f0f0f0;
+}

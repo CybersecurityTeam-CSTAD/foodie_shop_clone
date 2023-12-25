@@ -1,0 +1,414 @@
+server:
+  port: 3000
+  basePath: ''
+application:
+  domain: juice-sh.op
+  name: 'FOODIE CSTAD'
+  logo: coffee.png
+  favicon: favicon_js.ico
+  theme: bluegrey-lightgreen # Options: bluegrey-lightgreen blue-lightblue deeppurple-amber indigo-pink pink-bluegrey purple-green deeporange-indigo
+  showVersionNumber: true
+  showGitHubLinks: true
+  localBackupEnabled: true
+  numberOfRandomFakeUsers: 0
+  altcoinName: Juicycoin
+  privacyContactEmail: donotreply@owasp-juice.shop
+  customMetricsPrefix: juiceshop
+  chatBot:
+    name: 'Juicy'
+    greeting: "Nice to meet you <customer-name>, I'm <bot-name>"
+    trainingData: 'botDefaultTrainingData.json'
+    defaultResponse: "Sorry I couldn't understand what you were trying to say"
+    avatar: 'JuicyChatBot.png'
+  social:
+    twitterUrl: 'https://twitter.com/owasp_juiceshop'
+    facebookUrl: 'https://www.facebook.com/owasp.juiceshop'
+    slackUrl: 'https://owasp.org/slack/invite'
+    redditUrl: 'https://www.reddit.com/r/owasp_juiceshop'
+    pressKitUrl: 'https://github.com/OWASP/owasp-swag/tree/master/projects/juice-shop'
+    nftUrl: 'https://opensea.io/collection/juice-shop'
+    questionnaireUrl: ~
+  recyclePage:
+    topProductImage: fruit_press.jpg
+    bottomProductImage: apple_pressings.jpg
+  welcomeBanner:
+    showOnFirstStart: true
+    title: 'Welcome to OWASP Juice Shop!'
+    message: "<p>Being a web application with a vast number of intended security vulnerabilities, the <strong>OWASP Juice Shop</strong> is supposed to be the opposite of a best practice or template application for web developers: It is an awareness, training, demonstration and exercise tool for security risks in modern web applications. The <strong>OWASP Juice Shop</strong> is an open-source project hosted by the non-profit <a href='https://owasp.org' target='_blank'>Open Web Application Security Project (OWASP)</a> and is developed and maintained by volunteers. Check out the link below for more information and documentation on the project.</p><h1><a href='https://owasp-juice.shop' target='_blank'>https://owasp-juice.shop</a></h1>"
+  cookieConsent:
+    message: 'This website uses fruit cookies to ensure you get the juiciest tracking experience.'
+    dismissText: 'Me want it!'
+    linkText: 'But me wait!'
+    linkUrl: 'https://www.youtube.com/watch?v=9PnbKL3wuH4'
+  securityTxt:
+    contact: 'mailto:donotreply@owasp-juice.shop'
+    encryption: 'https://keybase.io/bkimminich/pgp_keys.asc?fingerprint=19c01cb7157e4645e9e2c863062a85a8cbfbdcda'
+    acknowledgements: '/#/score-board'
+    hiring: '/#/jobs'
+  promotion:
+    video: owasp_promo.mp4
+    subtitles: owasp_promo.vtt
+  easterEggPlanet:
+    name: Orangeuze
+    overlayMap: orangemap2k.jpg
+  googleOauth:
+    clientId: '1005568560502-6hm16lef8oh46hr2d98vf2ohlnj4nfhq.apps.googleusercontent.com'
+    authorizedRedirects:
+      - { uri: 'https://demo.owasp-juice.shop' }
+      - { uri: 'https://juice-shop.herokuapp.com' }
+      - { uri: 'https://preview.owasp-juice.shop' }
+      - { uri: 'https://juice-shop-staging.herokuapp.com' }
+      - { uri: 'https://juice-shop.wtf' }
+      - { uri: 'http://localhost:3000', proxy: 'https://local3000.owasp-juice.shop' }
+      - { uri: 'http://127.0.0.1:3000', proxy: 'https://local3000.owasp-juice.shop' }
+      - { uri: 'http://localhost:4200', proxy: 'https://local4200.owasp-juice.shop' }
+      - { uri: 'http://127.0.0.1:4200', proxy: 'https://local4200.owasp-juice.shop' }
+      - { uri: 'http://192.168.99.100:3000', proxy: 'https://localmac.owasp-juice.shop' }
+      - { uri: 'http://192.168.99.100:4200', proxy: 'https://localmac.owasp-juice.shop' }
+      - { uri: 'http://penguin.termina.linux.test:3000', proxy: 'https://localchromeos.owasp-juice.shop' }
+      - { uri: 'http://penguin.termina.linux.test:4200', proxy: 'https://localchromeos.owasp-juice.shop' }
+challenges:
+  showSolvedNotifications: true
+  showHints: true
+  showMitigations: true
+  codingChallengesEnabled: solved # Options: never  solved  always
+  restrictToTutorialsFirst: false
+  overwriteUrlForProductTamperingChallenge: 'https://owasp.slack.com'
+  xssBonusPayload: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771984076&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+  safetyOverride: false
+  showFeedbackButtons: true
+hackingInstructor:
+  isEnabled: true
+  avatarImage: JuicyBot.png
+  hintPlaybackSpeed: normal # Options: faster fast normal slow slower
+products:
+  -
+    name: 'Roasted Turkey'
+    price: 3.99
+    deluxePrice: 1.99
+    limitPerUser: 5
+    description: 'Turkey meat, commonly referred to as just turkey, is the meat from turkeys, typically domesticated turkeys but also wild turkeys.'
+    image: 1.webp
+    reviews:
+      - { text: 'One of my favorites!', author: admin }
+  -
+    name: 'Sushi Set'
+    description: 'A sushi set with 6 pieces of nigiri and 6 maki rolls. Contains raw fish.'
+    price: 2.99
+    deluxePrice: 2.49
+    image: 2.webp
+    reviews:
+      - { text: 'y0ur f1r3wall needs m0r3 musc13', author: uvogin }
+  -
+    name: 'Turkey Pizza'
+    description: 'Original taste of turkey pizza. made by turkish chef'
+    price: 2.99
+    image: 3.webp
+    reviews:
+      - { text: 'I bought it, would buy again. 5/7', author: admin }
+  -
+    name: 'France bread'
+    description: 'France bread with original tast from paris.'
+    price: 1.99
+    image: 4.webp
+  -
+    name: 'Chicken Wing fry'
+    description: 'Very deliciuse .'
+    price: 2.99
+    deluxePrice: 1.99
+    limitPerUser: 5
+    image: 5.webp
+  -
+    name: 'Italian breakfast'
+    description: 'Made from green tea and milk. Contains bubble tea pearls.'
+    price: 1.99
+    image: 6.webp
+    reviews:
+      - { text: 'Fry liked it too.', author: bender }
+  -
+    name: 'Chicken Burger'
+    description: 'Made from blueberries and soda.'
+    price: 2.49
+    limitPerUser: 5
+    image: 7.webp
+  
+  -
+    name: 'Turkey kabab'
+    description: 'Made from blackberries and soda.'
+    price: 2.01
+    image: 8.webp
+    urlForProductTamperingChallenge: 'https://www.owasp.org/index.php/O-Saft'
+  -
+    name: 'set of Khmer sweet'
+    description: 'Made from brown sugar.'
+    price: 2.99
+    image: 9.webp
+    useForChristmasSpecialChallenge: true
+  -
+    name: 'Nom Italy'
+    description: 'Contains a magical collection of the rarest fruits gathered from all around the world, like Cherymoya Annona cherimola, Jabuticaba Myrciaria cauliflora, Bael Aegle marmelos... and others, at an unbelievable price! <br/><span style="color:red;">This item has been made unavailable because of lack of safety standards.</span>'
+    price: 6.99
+    image: 10.webp
+    keywordsForPastebinDataLeakChallenge:
+      - hueteroneel
+      - eurogium edule
+  -
+    name: 'Honey Lemon Tea'
+    description: 'Die-cut sticker with the official 2015/2016 logo. By now this is a rare collectors item. <em>Out of stock!</em>'
+    price: 1.99
+    image: 11.webp
+    deletedDate: '2017-04-28'
+  -
+    name: 'Nham Nham'
+    description: 'Made from coffee, milk and chocolate. Contains caffeine.'
+    price: 4.99
+    image: 12.webp
+  -
+    name: 'Lahmacun'
+    description: 'best product for this shop , very good taste and very good price'
+    price: 1.99
+    image: 13.webp
+  -
+    name: 'Manti'
+    description: 'Made from coffee and water. Contains caffeine.'
+    price: 1.99
+    image: 14.webp
+  -
+    name: 'Baklava'
+    description: 'Made from matcha and milk. Contains bubble tea pearls.'
+    price: 4.99
+    image: 15.webp
+  -
+    name: 'Kofta'
+    description: 'Made from matcha and milk. Contains bubble tea pearls. hot hot spicy spicy'
+    price: 1.99
+    image: 16.webp
+    reviews:
+      - { text: 'I straight-up gots nuff props fo''these tattoos!', author: rapper }
+  -
+    name: 'Pide'
+    description: 'Best tranditional coffee in cambodia'
+    price: 0.99
+    image: 17.webp
+  -
+    name: 'Borek'
+    description: 'Made from coffee and coconut milk. Contains caffeine.'
+    price: 1.99
+    image: 18.webp
+  -
+    name: 'Dolma'
+    description: 'Coconut Khmer product jai dep jai dep'
+    price: 2.92
+    quantity: 5
+    limitPerUser: 5
+    image: 19.webp
+    reviews:
+      - { text: 'This thang would look phat on Bobby''s jacked fur coat!', author: rapper }
+      - { text: 'Looks so much better on my uniform than the boring Starfleet symbol.', author: jim }
+  -
+    name: 'Kuzu Tandir'
+    description: 'Coconut from Kompong Cham'
+    price: 1.99
+    image: 20.webp
+  -
+    name: 'Panna Cotta'
+    description: 'Looks poisonous but is actually very good for your health! Made from green cabbage, spinach, kiwi and grass.'
+    price: 1.99
+    image: 21.webp
+    reviews:
+      - { text: 'Fresh out of a replicator.', author: jim }
+  -
+    name: 'Pizza Margherita'
+    description: 'Juice of the <em>Cydonia oblonga</em> fruit. Not exactly sweet but rich in Vitamin C.'
+    price: 2.99
+    image: 22.webp
+  -
+    name: 'Spaghetti Carbonara'
+    description: 'Finest pressings of strawberry. Allergy disclaimer: Might contain traces of worms. Can be <a href="/#recycle">sent back to us</a> for recycling.'
+    price: 1.89
+    limitPerUser: 5
+    image: 23.webp
+  -
+    name: 'Lasagna'
+    description: 'Fruits go in. Juice comes out. Pomace you can send back to us for recycling purposes.'
+    price: 2.99
+    image: 24.webp
+  -
+    name: 'Risotto'
+    description: 'This rare item was designed and handcrafted in Sweden. This is why it is so incredibly expensive despite its complete lack of purpose.'
+    price: 2.99
+    image: 25.webp # Exif metadata contains "OpenSCAD" as subtle hint...
+    fileForRetrieveBlueprintChallenge: JuiceShop.stl # ...to blueprint file type
+    exifForBlueprintChallenge:
+      - OpenSCAD
+  -
+    name: 'Osso Buco'
+    description: 'Very delicious and very expensive.'
+    price: 8.74
+    quantity: 0
+    image: 26.webp
+    deletedDate: '2020-12-24'
+  -
+    name: 'Caprese Salad'
+    description: 'Sweet and tasty!'
+    price: 2.03
+    image: 27.webp
+    deletedDate: '2017-07-01'
+  -
+    name: 'Focaccia'
+    description: 'Sweet & tasty!'
+    price: 3.99
+    image: 28.webp
+  -
+    name: 'Bruschetta '
+    description: 'As the old German saying goes: "Orange are good for the eyes. Or has anyone ever seen a rabbit with glasses?"'
+    price: 1.99
+    image: 29.webp
+    reviews:
+      - { text: '0 st4rs f0r 7h3 h0rr1bl3 s3cur17y', author: uvogin }
+  -
+    name: 'Gnocchi'
+    description: 'Made from green tea and lemon. '
+    price: 1.20
+    image: 30.webp
+    deletedDate: '2017-09-20'
+  -
+    name: 'Polenta'
+    description: 'Made from red tea and lemon. '
+    price: 0.99
+    image: 31.webp
+    reviews:
+      - { text: 'Even more interesting than watching Interdimensional Cable!', author: morty }
+  -
+    name: 'Arancini'
+    description: 'Made from taro and milk. Contains bubble tea pearls.'
+    price: 1.99
+    quantity: 3
+    limitPerUser: 1
+    image: 32.webp
+  -
+    name: 'Kadayif'
+    description: 'Copy from starbuck for study purpose'
+    price: 9.99
+    quantity: 0
+    image: 33.webp
+  -
+    name: 'Menemen'
+    description: 'Very delicious and very expensive and juicy.'
+    price: 10.50
+    quantity: 8
+    image: 34.webp
+    reviews:
+      - { text: 'Wait for a 10$ Steam sale of Tabletop Simulator!', author: bjoernOwasp }
+  -
+    name: 'Ratatouille'
+    description: 'Made from strawberry and milk. '
+    price: 2.01
+    quantity: 0
+    image: 35.webp
+    reviews:
+      - { text: "Here yo' learn how tha fuck ta not show yo' goddamn phone on camera!", author: rapper }
+  -
+    name: 'Quiche Lorraine'
+    description: "Best recommend"
+    price: 2.00
+    quantity: 0
+    image: 36.webp
+    reviews:
+      - { text: "Rad, dude!", author: rapper }
+      - { text: "Looks spacy on Bones' new tricorder!", author: jim }
+      - { text: "Will put one on the Planet Express ship's bumper!", author: bender }
+  -
+    name: 'Crème Brûlée'
+    description: "Very delicious and unforgotable"
+    price: 3.49
+    quantity: 0
+    limitPerUser: 1
+    image: 37.webp
+    reviews:
+      - { text: "K33p5 y0ur ju1cy 5plu773r 70 y0ur53lf!", author: uvogin }
+      - { text: "Puny mask for puny human weaklings!", author: bender }
+  -
+    name: 'Salade Niçoise'
+    description: 'sweet and tasty'
+    price: 2.99
+    deluxePrice: 0.99
+    deletedDate: '2020-11-30'
+    limitPerUser: 5
+    image: 38.webp
+    reviews:
+      - { text: "Ooooh, puny human playing Mau Mau, now?", author: bender }
+  -
+    name: 'Pâté'
+    description: 'sweet and tasty'
+    price: 9.99
+    deluxePrice: 6.99
+    deletedDate: '2020-11-30'
+    quantity: 2
+    limitPerUser: 1
+    image: 39.webp
+    reviews:
+      - { text: "Mau Mau with bling-bling? Humans are so pathetic!", author: bender }
+  -
+    name: 'Galette Bretonne'
+    description: 'sweet and tasty'
+    price: 9.99
+    quantity: 1
+    limitPerUser: 1
+    image: 40.webp
+    reviews:
+      - { text: "🧊 Let it go, let it go 🎶 Can't hold it back anymore 🎶 Let it go, let it go 🎶 Turn away and slam the door ❄️", author: rapper }
+  -
+    name: 'Feijoada'
+    description: 'Unique digital painting depicting Stan, our most qualified and almost profitable salesman. He made a succesful carreer in selling used ships, coffins, krypts, crosses, real estate, life insurance, restaurant supplies, voodoo enhanced asbestos and courtroom souvenirs before <em>finally</em> adding his expertise to the Juice Shop marketing team.'
+    price: 5
+    quantity: 1
+    image: 41.webp
+    reviews:
+      - { text: "I'd stand on my head to make you a deal for this piece of art.", author: stan }
+      - { text: "Just when my opinion of humans couldn't get any lower, along comes Stan...", author: bender }
+  -
+    name: 'Coxinha '
+    description: 'sweet and tasty'
+    price: 10
+    quantity: 3
+    limitPerUser: 1
+    image: 42.webp
+    reviews:
+      - { text: 'DO NOT PLAY WITH THIS! Double-sleeve, then put it in the GitHub Arctic Vault for perfect preservation and boost of secondary market value!', author: accountant }
+  -
+    name: 'Moqueca'
+    description: 'sweet and tasty'
+    price: 0.00000000000000000001
+    deletedDate: '2021-09-25'
+    limitPerUser: 1
+    image: 43.webp
+    reviews:
+      - { text: "I'll be there! Will you, too?", author: bjoernOwasp }
+memories:
+  -
+    image: 'magn(et)ificent!-1571814229653.jpg'
+    caption: 'Magn(et)ificent!'
+    user: bjoernGoogle
+  -
+    image: 'my-rare-collectors-item!-[̲̅$̲̅(̲̅-͡°-͜ʖ-͡°̲̅)̲̅$̲̅]-1572603645543.jpg'
+    caption: 'My rare collectors item! [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]'
+    user: bjoernGoogle
+  -
+    image: 'favorite-hiking-place.png'
+    caption: 'I love going hiking here...'
+    geoStalkingMetaSecurityQuestion: 14
+    geoStalkingMetaSecurityAnswer: 'Daniel Boone National Forest'
+  -
+    image: 'IMG_4253.jpg'
+    caption: 'My old workplace...'
+    geoStalkingVisualSecurityQuestion: 10
+    geoStalkingVisualSecurityAnswer: 'ITsec'
+  -
+    image: 'BeeHaven.png'
+    caption: 'Welcome to the Bee Haven (/#/bee-haven)🐝'
+    user: evm
+ctf:
+  showFlagsInNotifications: false
+  showCountryDetailsInNotifications: none # Options: none  name  flag  both
+  countryMapping: ~

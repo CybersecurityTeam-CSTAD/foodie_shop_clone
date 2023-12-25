@@ -1,0 +1,117 @@
+/*!
+ * Copyright (c) 2014-2023 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * SPDX-License-Identifier: MIT
+ */
+
+$break-line: #c0c0c0;
+
+mat-card {
+  height: fit-content;
+  min-width: 320px;
+  width: 35%;
+  border: 1px solid #e5e7eb;
+  // width: 500px;
+  padding: 49px 
+}
+// #login_card{
+//   background-color: whitesmoke;
+//   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+// }
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.forgot-pw {
+  font-size: 11px;
+  margin-top: -15px;
+}
+
+mat-checkbox {
+  margin-bottom: 20px;
+  margin-left: 20%;
+  margin-top: 5px;
+}
+
+mat-form-field {
+  padding-top: 10px;
+}
+
+mat-form-field:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+#loginButton,
+#loginButtonGoogle {
+  margin-left: 20%;
+  margin-top: 30px;
+  width: 60%;
+  background-color: #00b14f;
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+
+}
+
+.breakLine {
+  display: table;
+}
+
+.breakLine > div {
+  display: table-cell;
+  white-space: nowrap;
+}
+
+.line > div {
+  border-bottom: 1px solid $break-line;
+  height: 1px;
+}
+
+.textOnLine {
+  padding: 0 5px;
+}
+
+.line {
+  vertical-align: middle;
+  width: 50%;
+}
+
+#newCustomerLink {
+  align-self: center;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+:host ::ng-deep .mat-form-field-suffix {
+  margin-bottom: auto !important;
+  margin-top: auto !important;
+}
+
+:host ::ng-deep .mat-icon-button {
+  height: 40px !important;
+  width: 24px !important;
+}
+
+// right bar login page 
+#right_bar{
+  height: 60vh;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  // background-color: rgb(0, 13, 255);
+}
+.log-in-container{
+  display: flex;
+  // height: 100vh;
+
+}
+#img-login{
+  width: 400px;
+  padding-top: 10px;
+}
