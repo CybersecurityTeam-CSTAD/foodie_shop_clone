@@ -1,4 +1,4 @@
-# ![Juice Shop Logo](https://cdn-icons-png.flaticon.com/512/5978/5978671.png) Foodie CSTAD
+# ![Foodie CSTAD logo Logo](https://cdn-icons-png.flaticon.com/512/5978/5978671.png) Foodie CSTAD
 
 Foodie CSTAD is probably the most modern and sophisticated insecure web application! It can be used in security
 trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the
@@ -10,7 +10,7 @@ applications!
 )
 
 For a detailed introduction, full list of features and architecture overview please visit the official project page:
-<https://owasp-juice.shop>
+<https://food.cstad.shop>
 
 ## Table of contents
 
