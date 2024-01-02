@@ -19,7 +19,6 @@ For a detailed introduction, full list of features and architecture overview ple
     - [Packaged Distributions](#packaged-distributions)
     - [Docker Container](#docker-container)
     - [Amazon EC2 Instance](#amazon-ec2-instance)
-    - [Google Compute Engine Instance](#google-compute-engine-instance)
 - [Demo](#demo)
 - [Documentation](#documentation)
     - [Node.js version compatibility](#nodejs-version-compatibility)
@@ -71,26 +70,6 @@ service docker start
 docker pull sokpheng001/cstad-shop:latest
 docker run -dp 80:3000 sokpheng001/cstad-shop:latest
 ```
-
-### Google Compute Engine Instance
-
-1. Login to the Google Cloud Console and
-   [open Cloud Shell](https://console.cloud.google.com/home/dashboard?cloudshell=true).
-2. Launch a new GCE instance based on the juice-shop container. Take note of the `EXTERNAL_IP` provided in the output.
-
-```
-gcloud compute instances create-with-container owasp-juice-shop-app --container-image bkimminich/juice-shop
-```
-
-3. Create a firewall rule that allows inbound traffic to port 3000
-
-```
-gcloud compute firewall-rules create juice-rule --allow tcp:3000
-```
-
-4. Your container is now running and available at
-   `http://<EXTERNAL_IP>:3000/`
-
 ### Heroku
 
 1. [Sign up to Heroku](https://signup.heroku.com/) and
